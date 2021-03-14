@@ -64,11 +64,11 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 210000;
-        consensus.BIP16Height = 300000; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
-        consensus.BIP34Height = 710000;
-        consensus.BIP34Hash = uint256S("fa09d204a83a768ed5a7c8d441fa62f2043abf420cff1226c7b4329aeb9d51cf");
-        consensus.BIP65Height = 900000; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
-        consensus.BIP66Height = 800000; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
+        consensus.BIP16Height = 110;
+        consensus.BIP34Height = 110;
+        consensus.BIP34Hash = uint256();
+        consensus.BIP65Height = 110;
+        consensus.BIP66Height = 110;
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 2.5 * 60;
@@ -91,10 +91,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000002ee655bf00bf13b4cca");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de"); //1683528
+        consensus.defaultAssumeValid = uint256S("0x50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -112,8 +112,8 @@ public:
 
         genesis = CreateGenesisBlock(1615543251, 1648303, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de"));
-        assert(genesis.hashMerkleRoot == uint256S("48319340f0a5597c758046475dd81bd391779aa239028d41973a1c5696211f13 "));
+        assert(consensus.hashGenesisBlock == uint256S("0x50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de"));
+        assert(genesis.hashMerkleRoot == uint256S("0x48319340f0a5597c758046475dd81bd391779aa239028d41973a1c5696211f13 "));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -142,19 +142,19 @@ public:
 
         checkpointData = {
             {
-                {  0, uint256S("50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de")},
+                {  0, uint256S("0x50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de")},
             }
         };
 
         chainTxData = ChainTxData{
-            // Data from rpc: getchaintxstats 4096 2cdba8c47858d34cf0e02dfb8733263a3ed8705b1663ec7c158783d77b93e7ee
+            // Data from rpc: getchaintxstats 0 50cf739b3abac9abc5a8b8202b277a5c6b073bc1302e399d58ccb122182861de
             /* nTime    */ 1615543251,
             /* nTxCount */ 0,
-            /* dTxRate  */ 0.0
+            /* dTxRate  */ 0
         };
 
         /* disable fallback fee on mainnet */
-        m_fallback_fee_enabled = false;
+        m_fallback_fee_enabled = true;
     }
 };
 
