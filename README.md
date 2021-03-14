@@ -1,4 +1,4 @@
-Bitcoin-Africa Core integration/staging tree ![](share/pixmaps/bitcoin64.png)
+Bitcoin-Africa Core integration/staging tree
 =====================================
 
 
