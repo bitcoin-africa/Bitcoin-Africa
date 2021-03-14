@@ -1,35 +1,34 @@
-Bitcoin-Africa Core integration/staging tree
+BitcoinAfrica Core integration/staging tree
 =====================================
 
+[![Build Status](https://travis-ci.org/bitcoinafrica-project/bitcoinafrica.svg?branch=master)](https://travis-ci.org/bitcoinafrica-project/bitcoinafrica)
 
 https://bitcoinafrica.org
 
-
-What is Bitcoin-Africa?
+What is Bitcoinafrica?
 ----------------
 
-
-Bitcoin-Africa is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin-Africa uses peer-to-peer technology to operate
+Bitcoinafrica is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. Bitcoinafrica uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin-Africa Core is the name of open source
+out collectively by the network. Bitcoinafrica Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Bitcoin-Africa Core software, see [https://bitcoinafrica.org](https://bitcoinafrica.org).
+the Bitcoinafrica Core software, see [https://bitcoinafrica.org](https://bitcoinafrica.org).
 
 License
 -------
 
-Bitcoin-Africa Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Bitcoinafrica Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin-africa/Bitcoin-Africa/tags) are created
-regularly to indicate new official, stable release versions of Bitcoin-Africa Core.
+completely stable. [Tags](https://github.com/bitcoinafrica-project/bitcoinafrica/tags) are created
+regularly to indicate new official, stable release versions of Bitcoinafrica Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
@@ -72,12 +71,10 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to Bitcoin-Africa periodically.
+Translations are converted to Bitcoinafrica periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
 
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
-
-![](share/pixmaps/nsis-header.bmp)
