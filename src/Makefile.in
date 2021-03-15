@@ -776,21 +776,21 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/icons/address-book.png qt/res/icons/about.png \
 	qt/res/icons/about_qt.png qt/res/icons/bitcoin.ico \
 	qt/res/icons/bitcoin_testnet.ico qt/res/icons/bitcoin.png \
-	qt/res/icons/chevron.png qt/res/icons/clock1.png \
-	qt/res/icons/clock2.png qt/res/icons/clock3.png \
-	qt/res/icons/clock4.png qt/res/icons/clock5.png \
-	qt/res/icons/configure.png qt/res/icons/connect0.png \
-	qt/res/icons/connect1.png qt/res/icons/connect2.png \
-	qt/res/icons/connect3.png qt/res/icons/connect4.png \
-	qt/res/icons/debugwindow.png qt/res/icons/edit.png \
-	qt/res/icons/editcopy.png qt/res/icons/editpaste.png \
-	qt/res/icons/export.png qt/res/icons/eye.png \
-	qt/res/icons/eye_minus.png qt/res/icons/eye_plus.png \
-	qt/res/icons/filesave.png qt/res/icons/fontbigger.png \
-	qt/res/icons/fontsmaller.png qt/res/icons/hd_disabled.png \
-	qt/res/icons/hd_enabled.png qt/res/icons/history.png \
-	qt/res/icons/info.png qt/res/icons/key.png \
-	qt/res/icons/bitcoinafrica_splash.png \
+	qt/res/icons/bitcoin2.png qt/res/icons/chevron.png \
+	qt/res/icons/clock1.png qt/res/icons/clock2.png \
+	qt/res/icons/clock3.png qt/res/icons/clock4.png \
+	qt/res/icons/clock5.png qt/res/icons/configure.png \
+	qt/res/icons/connect0.png qt/res/icons/connect1.png \
+	qt/res/icons/connect2.png qt/res/icons/connect3.png \
+	qt/res/icons/connect4.png qt/res/icons/debugwindow.png \
+	qt/res/icons/edit.png qt/res/icons/editcopy.png \
+	qt/res/icons/editpaste.png qt/res/icons/export.png \
+	qt/res/icons/eye.png qt/res/icons/eye_minus.png \
+	qt/res/icons/eye_plus.png qt/res/icons/filesave.png \
+	qt/res/icons/fontbigger.png qt/res/icons/fontsmaller.png \
+	qt/res/icons/hd_disabled.png qt/res/icons/hd_enabled.png \
+	qt/res/icons/history.png qt/res/icons/info.png \
+	qt/res/icons/key.png qt/res/icons/bitcoinafrica_splash.png \
 	qt/res/icons/lock_closed.png qt/res/icons/lock_open.png \
 	qt/res/icons/network_disabled.png qt/res/icons/open.png \
 	qt/res/icons/overview.png qt/res/icons/proxy.png \
@@ -1058,16 +1058,17 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 @ENABLE_TESTS_TRUE@	test/fuzz/txundo_deserialize$(EXEEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am__EXEEXT_10 = $(am__EXEEXT_9)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am__bench_bench_bitcoinafrica_SOURCES_DIST = bench/data/block413567.raw \
-	bench/bench_bitcoin.cpp bench/bench.cpp bench/bench.h \
-	bench/block_assemble.cpp bench/checkblock.cpp \
-	bench/checkqueue.cpp bench/duplicate_inputs.cpp \
-	bench/examples.cpp bench/rollingbloom.cpp \
-	bench/crypto_hash.cpp bench/ccoins_caching.cpp \
-	bench/gcs_filter.cpp bench/merkle_root.cpp \
-	bench/mempool_eviction.cpp bench/verify_script.cpp \
-	bench/base58.cpp bench/bech32.cpp bench/lockedpool.cpp \
-	bench/prevector.cpp bench/coin_selection.cpp
+am__bench_bench_bitcoinafrica_SOURCES_DIST =  \
+	bench/data/block413567.raw bench/bench_bitcoin.cpp \
+	bench/bench.cpp bench/bench.h bench/block_assemble.cpp \
+	bench/checkblock.cpp bench/checkqueue.cpp \
+	bench/duplicate_inputs.cpp bench/examples.cpp \
+	bench/rollingbloom.cpp bench/crypto_hash.cpp \
+	bench/ccoins_caching.cpp bench/gcs_filter.cpp \
+	bench/merkle_root.cpp bench/mempool_eviction.cpp \
+	bench/verify_script.cpp bench/base58.cpp bench/bech32.cpp \
+	bench/lockedpool.cpp bench/prevector.cpp \
+	bench/coin_selection.cpp
 @ENABLE_BENCH_TRUE@@ENABLE_WALLET_TRUE@am__objects_25 = bench/bench_bench_bitcoinafrica-coin_selection.$(OBJEXT)
 @ENABLE_BENCH_TRUE@am_bench_bench_bitcoinafrica_OBJECTS =  \
 @ENABLE_BENCH_TRUE@	$(am__objects_4) \
@@ -1093,7 +1094,8 @@ am__bench_bench_bitcoinafrica_SOURCES_DIST = bench/data/block413567.raw \
 @ENABLE_BENCH_TRUE@am__objects_26 = $(am__objects_4)
 @ENABLE_BENCH_TRUE@nodist_bench_bench_bitcoinafrica_OBJECTS =  \
 @ENABLE_BENCH_TRUE@	$(am__objects_26)
-bench_bench_bitcoinafrica_OBJECTS = $(am_bench_bench_bitcoinafrica_OBJECTS) \
+bench_bench_bitcoinafrica_OBJECTS =  \
+	$(am_bench_bench_bitcoinafrica_OBJECTS) \
 	$(nodist_bench_bench_bitcoinafrica_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_18)
 am__DEPENDENCIES_3 = $(am__append_19)
@@ -1116,6 +1118,102 @@ bench_bench_bitcoinafrica_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(bench_bench_bitcoinafrica_CXXFLAGS) $(CXXFLAGS) \
 	$(bench_bench_bitcoinafrica_LDFLAGS) $(LDFLAGS) -o $@
+am__bitcoinafrica_cli_SOURCES_DIST = bitcoin-cli.cpp \
+	bitcoin-cli-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_27 = bitcoin-cli-res.$(OBJEXT)
+am_bitcoinafrica_cli_OBJECTS =  \
+	bitcoinafrica_cli-bitcoin-cli.$(OBJEXT) $(am__objects_27)
+bitcoinafrica_cli_OBJECTS = $(am_bitcoinafrica_cli_OBJECTS)
+bitcoinafrica_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) \
+	$(am__DEPENDENCIES_4) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
+bitcoinafrica_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) \
+	$(bitcoinafrica_cli_LDFLAGS) $(LDFLAGS) -o $@
+am__bitcoinafrica_tx_SOURCES_DIST = bitcoin-tx.cpp bitcoin-tx-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_28 = bitcoin-tx-res.$(OBJEXT)
+am_bitcoinafrica_tx_OBJECTS = bitcoinafrica_tx-bitcoin-tx.$(OBJEXT) \
+	$(am__objects_28)
+bitcoinafrica_tx_OBJECTS = $(am_bitcoinafrica_tx_OBJECTS)
+bitcoinafrica_tx_DEPENDENCIES = $(am__DEPENDENCIES_4) \
+	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+bitcoinafrica_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) \
+	$(bitcoinafrica_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__bitcoinafrica_wallet_SOURCES_DIST = bitcoin-wallet.cpp \
+	bitcoin-wallet-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_29 = bitcoin-wallet-res.$(OBJEXT)
+am_bitcoinafrica_wallet_OBJECTS =  \
+	bitcoinafrica_wallet-bitcoin-wallet.$(OBJEXT) \
+	$(am__objects_29)
+bitcoinafrica_wallet_OBJECTS = $(am_bitcoinafrica_wallet_OBJECTS)
+bitcoinafrica_wallet_DEPENDENCIES = $(LIBBITCOIN_WALLET_TOOL) \
+	$(LIBBITCOIN_WALLET) $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_UTIL) \
+	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) $(LIBLEVELDB_SSE42) \
+	$(am__DEPENDENCIES_3) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1)
+bitcoinafrica_wallet_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) \
+	$(bitcoinafrica_wallet_LDFLAGS) $(LDFLAGS) -o $@
+am__bitcoinafricad_SOURCES_DIST = bitcoind.cpp bitcoind-res.rc
+@TARGET_WINDOWS_TRUE@am__objects_30 = bitcoind-res.$(OBJEXT)
+am_bitcoinafricad_OBJECTS = bitcoinafricad-bitcoind.$(OBJEXT) \
+	$(am__objects_30)
+bitcoinafricad_OBJECTS = $(am_bitcoinafricad_OBJECTS)
+bitcoinafricad_DEPENDENCIES = $(LIBBITCOIN_SERVER) \
+	$(LIBBITCOIN_WALLET) $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+	$(am__DEPENDENCIES_4) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_ZMQ) \
+	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
+	$(am__DEPENDENCIES_2) $(LIBLEVELDB_SSE42) \
+	$(am__DEPENDENCIES_3) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+bitcoinafricad_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) \
+	$(bitcoinafricad_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_bitcoinafrica_qt_SOURCES_DIST = qt/main.cpp \
+	qt/res/bitcoin-qt-res.rc
+@ENABLE_QT_TRUE@am__objects_31 = qt/res/bitcoin-qt-res.$(OBJEXT)
+@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__objects_32 =  \
+@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@	$(am__objects_31)
+@ENABLE_QT_TRUE@am_qt_bitcoinafrica_qt_OBJECTS =  \
+@ENABLE_QT_TRUE@	qt/qt_bitcoinafrica_qt-main.$(OBJEXT) \
+@ENABLE_QT_TRUE@	$(am__objects_32)
+qt_bitcoinafrica_qt_OBJECTS = $(am_qt_bitcoinafrica_qt_OBJECTS)
+@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_6 =  \
+@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@	$(LIBBITCOIN_ZMQ) \
+@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@	$(am__DEPENDENCIES_1)
+@ENABLE_BIP70_TRUE@@ENABLE_QT_TRUE@am__DEPENDENCIES_7 =  \
+@ENABLE_BIP70_TRUE@@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
+@ENABLE_BIP70_FALSE@@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__DEPENDENCIES_8 = $(am__DEPENDENCIES_1)
+@ENABLE_QT_TRUE@qt_bitcoinafrica_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+@ENABLE_QT_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_47) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
+@ENABLE_QT_TRUE@	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
+@ENABLE_QT_TRUE@	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_4) $(am__DEPENDENCIES_2) \
+@ENABLE_QT_TRUE@	$(LIBLEVELDB_SSE42) $(am__DEPENDENCIES_3) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_7) $(am__DEPENDENCIES_8) \
+@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
+qt_bitcoinafrica_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(qt_bitcoinafrica_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+	--mode=link $(CXXLD) $(qt_bitcoinafrica_qt_CXXFLAGS) \
+	$(CXXFLAGS) $(qt_bitcoinafrica_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__qt_test_test_bitcoinafrica_qt_SOURCES_DIST = qt/test/apptests.cpp \
 	qt/test/compattests.cpp qt/test/rpcnestedtests.cpp \
 	qt/test/test_main.cpp qt/test/uritests.cpp qt/test/util.cpp \
@@ -1127,39 +1225,39 @@ am__qt_test_test_bitcoinafrica_qt_SOURCES_DIST = qt/test/apptests.cpp \
 	qt/test/addressbooktests.cpp qt/test/wallettests.cpp \
 	wallet/test/wallet_test_fixture.cpp \
 	qt/test/paymentservertests.cpp
-@ENABLE_QT_TESTS_TRUE@am__objects_27 = test/qt_test_test_bitcoinafrica_qt-test_bitcoin.$(OBJEXT)
-@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_28 = qt/test/qt_test_test_bitcoinafrica_qt-addressbooktests.$(OBJEXT) \
+@ENABLE_QT_TESTS_TRUE@am__objects_33 = test/qt_test_test_bitcoinafrica_qt-test_bitcoin.$(OBJEXT)
+@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_34 = qt/test/qt_test_test_bitcoinafrica_qt-addressbooktests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-wallettests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/qt_test_test_bitcoinafrica_qt-wallet_test_fixture.$(OBJEXT)
-@ENABLE_BIP70_TRUE@@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_29 = qt/test/qt_test_test_bitcoinafrica_qt-paymentservertests.$(OBJEXT)
+@ENABLE_BIP70_TRUE@@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_35 = qt/test/qt_test_test_bitcoinafrica_qt-paymentservertests.$(OBJEXT)
 @ENABLE_QT_TESTS_TRUE@am_qt_test_test_bitcoinafrica_qt_OBJECTS = qt/test/qt_test_test_bitcoinafrica_qt-apptests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-compattests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-rpcnestedtests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-test_main.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-uritests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-util.$(OBJEXT) \
-@ENABLE_QT_TESTS_TRUE@	$(am__objects_4) $(am__objects_27) \
-@ENABLE_QT_TESTS_TRUE@	$(am__objects_4) $(am__objects_28) \
-@ENABLE_QT_TESTS_TRUE@	$(am__objects_29)
-@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_30 = qt/test/qt_test_test_bitcoinafrica_qt-moc_addressbooktests.$(OBJEXT) \
+@ENABLE_QT_TESTS_TRUE@	$(am__objects_4) $(am__objects_33) \
+@ENABLE_QT_TESTS_TRUE@	$(am__objects_4) $(am__objects_34) \
+@ENABLE_QT_TESTS_TRUE@	$(am__objects_35)
+@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_36 = qt/test/qt_test_test_bitcoinafrica_qt-moc_addressbooktests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-moc_wallettests.$(OBJEXT)
-@ENABLE_BIP70_TRUE@@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_31 = qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.$(OBJEXT)
-@ENABLE_QT_TESTS_TRUE@am__objects_32 = qt/test/qt_test_test_bitcoinafrica_qt-moc_apptests.$(OBJEXT) \
+@ENABLE_BIP70_TRUE@@ENABLE_QT_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_37 = qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.$(OBJEXT)
+@ENABLE_QT_TESTS_TRUE@am__objects_38 = qt/test/qt_test_test_bitcoinafrica_qt-moc_apptests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-moc_compattests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-moc_rpcnestedtests.$(OBJEXT) \
 @ENABLE_QT_TESTS_TRUE@	qt/test/qt_test_test_bitcoinafrica_qt-moc_uritests.$(OBJEXT) \
-@ENABLE_QT_TESTS_TRUE@	$(am__objects_30) $(am__objects_31)
+@ENABLE_QT_TESTS_TRUE@	$(am__objects_36) $(am__objects_37)
 @ENABLE_QT_TESTS_TRUE@nodist_qt_test_test_bitcoinafrica_qt_OBJECTS =  \
-@ENABLE_QT_TESTS_TRUE@	$(am__objects_32)
+@ENABLE_QT_TESTS_TRUE@	$(am__objects_38)
 qt_test_test_bitcoinafrica_qt_OBJECTS =  \
 	$(am_qt_test_test_bitcoinafrica_qt_OBJECTS) \
 	$(nodist_qt_test_test_bitcoinafrica_qt_OBJECTS)
-@ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_6 =  \
+@ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_9 =  \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@	$(LIBBITCOIN_ZMQ) \
 @ENABLE_QT_TESTS_TRUE@@ENABLE_ZMQ_TRUE@	$(am__DEPENDENCIES_1)
 @ENABLE_QT_TESTS_TRUE@qt_test_test_bitcoinafrica_qt_DEPENDENCIES =  \
 @ENABLE_QT_TESTS_TRUE@	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
-@ENABLE_QT_TESTS_TRUE@	$(am__append_58) $(am__DEPENDENCIES_6) \
+@ENABLE_QT_TESTS_TRUE@	$(am__append_58) $(am__DEPENDENCIES_9) \
 @ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
 @ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_UTIL) \
 @ENABLE_QT_TESTS_TRUE@	$(LIBBITCOIN_CONSENSUS) \
@@ -1184,44 +1282,11 @@ qt_test_test_bitcoinafrica_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(qt_test_test_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) \
 	$(qt_test_test_bitcoinafrica_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_bitcoinafrica_qt_SOURCES_DIST = qt/main.cpp \
-	qt/res/bitcoin-qt-res.rc
-@ENABLE_QT_TRUE@am__objects_33 = qt/res/bitcoin-qt-res.$(OBJEXT)
-@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__objects_34 =  \
-@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@	$(am__objects_33)
-@ENABLE_QT_TRUE@am_qt_bitcoinafrica_qt_OBJECTS =  \
-@ENABLE_QT_TRUE@	qt/qt_bitcoinafrica_qt-main.$(OBJEXT) \
-@ENABLE_QT_TRUE@	$(am__objects_34)
-qt_bitcoinafrica_qt_OBJECTS = $(am_qt_bitcoinafrica_qt_OBJECTS)
-@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_7 =  \
-@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@	$(LIBBITCOIN_ZMQ) \
-@ENABLE_QT_TRUE@@ENABLE_ZMQ_TRUE@	$(am__DEPENDENCIES_1)
-@ENABLE_BIP70_TRUE@@ENABLE_QT_TRUE@am__DEPENDENCIES_8 =  \
-@ENABLE_BIP70_TRUE@@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
-@ENABLE_BIP70_FALSE@@ENABLE_QT_TRUE@@TARGET_WINDOWS_TRUE@am__DEPENDENCIES_9 = $(am__DEPENDENCIES_1)
-@ENABLE_QT_TRUE@qt_bitcoinafrica_qt_DEPENDENCIES = qt/libbitcoinqt.a \
-@ENABLE_QT_TRUE@	$(LIBBITCOIN_SERVER) $(am__append_47) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_7) $(LIBBITCOIN_CLI) \
-@ENABLE_QT_TRUE@	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-@ENABLE_QT_TRUE@	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_4) $(am__DEPENDENCIES_2) \
-@ENABLE_QT_TRUE@	$(LIBLEVELDB_SSE42) $(am__DEPENDENCIES_3) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_8) $(am__DEPENDENCIES_9) \
-@ENABLE_QT_TRUE@	$(am__DEPENDENCIES_1)
-qt_bitcoinafrica_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(qt_bitcoinafrica_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
-	$(CXXLD) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) \
-	$(qt_bitcoinafrica_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_address_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_35 = test/fuzz/test_fuzz_address_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_39 = test/fuzz/test_fuzz_address_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_address_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_35) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_39) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_address_deserialize-deserialize.$(OBJEXT)
 test_fuzz_address_deserialize_OBJECTS =  \
 	$(am_test_fuzz_address_deserialize_OBJECTS)
@@ -1244,9 +1309,9 @@ test_fuzz_address_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_address_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_addrman_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_36 = test/fuzz/test_fuzz_addrman_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_40 = test/fuzz/test_fuzz_addrman_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_addrman_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_36) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_40) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_addrman_deserialize-deserialize.$(OBJEXT)
 test_fuzz_addrman_deserialize_OBJECTS =  \
 	$(am_test_fuzz_addrman_deserialize_OBJECTS)
@@ -1269,9 +1334,9 @@ test_fuzz_addrman_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_addrman_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_banentry_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_37 = test/fuzz/test_fuzz_banentry_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_41 = test/fuzz/test_fuzz_banentry_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_banentry_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_37) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_41) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_banentry_deserialize-deserialize.$(OBJEXT)
 test_fuzz_banentry_deserialize_OBJECTS =  \
 	$(am_test_fuzz_banentry_deserialize_OBJECTS)
@@ -1294,9 +1359,9 @@ test_fuzz_banentry_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_banentry_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_block_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_38 = test/fuzz/test_fuzz_block_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_42 = test/fuzz/test_fuzz_block_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_block_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_38) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_42) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_block_deserialize-deserialize.$(OBJEXT)
 test_fuzz_block_deserialize_OBJECTS =  \
 	$(am_test_fuzz_block_deserialize_OBJECTS)
@@ -1319,9 +1384,9 @@ test_fuzz_block_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_block_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_blockheader_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_39 = test/fuzz/test_fuzz_blockheader_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_43 = test/fuzz/test_fuzz_blockheader_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blockheader_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_39) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_43) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blockheader_deserialize-deserialize.$(OBJEXT)
 test_fuzz_blockheader_deserialize_OBJECTS =  \
 	$(am_test_fuzz_blockheader_deserialize_OBJECTS)
@@ -1345,9 +1410,9 @@ test_fuzz_blockheader_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_blocklocator_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_40 = test/fuzz/test_fuzz_blocklocator_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_44 = test/fuzz/test_fuzz_blocklocator_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blocklocator_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_40) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_44) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blocklocator_deserialize-deserialize.$(OBJEXT)
 test_fuzz_blocklocator_deserialize_OBJECTS =  \
 	$(am_test_fuzz_blocklocator_deserialize_OBJECTS)
@@ -1371,9 +1436,9 @@ test_fuzz_blocklocator_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_blockmerkleroot_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_41 = test/fuzz/test_fuzz_blockmerkleroot-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_45 = test/fuzz/test_fuzz_blockmerkleroot-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blockmerkleroot_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_41) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_45) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blockmerkleroot-deserialize.$(OBJEXT)
 test_fuzz_blockmerkleroot_OBJECTS =  \
 	$(am_test_fuzz_blockmerkleroot_OBJECTS)
@@ -1396,9 +1461,9 @@ test_fuzz_blockmerkleroot_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_blockmerkleroot_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_blocktransactions_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_42 = test/fuzz/test_fuzz_blocktransactions_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_46 = test/fuzz/test_fuzz_blocktransactions_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blocktransactions_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_42) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_46) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blocktransactions_deserialize-deserialize.$(OBJEXT)
 test_fuzz_blocktransactions_deserialize_OBJECTS =  \
 	$(am_test_fuzz_blocktransactions_deserialize_OBJECTS)
@@ -1422,9 +1487,9 @@ test_fuzz_blocktransactions_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_blocktransactionsrequest_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_43 = test/fuzz/test_fuzz_blocktransactionsrequest_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_47 = test/fuzz/test_fuzz_blocktransactionsrequest_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blocktransactionsrequest_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_43) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_47) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blocktransactionsrequest_deserialize-deserialize.$(OBJEXT)
 test_fuzz_blocktransactionsrequest_deserialize_OBJECTS =  \
 	$(am_test_fuzz_blocktransactionsrequest_deserialize_OBJECTS)
@@ -1450,9 +1515,9 @@ test_fuzz_blocktransactionsrequest_deserialize_LINK = $(LIBTOOL) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_blockundo_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_44 = test/fuzz/test_fuzz_blockundo_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_48 = test/fuzz/test_fuzz_blockundo_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_blockundo_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_44) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_48) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_blockundo_deserialize-deserialize.$(OBJEXT)
 test_fuzz_blockundo_deserialize_OBJECTS =  \
 	$(am_test_fuzz_blockundo_deserialize_OBJECTS)
@@ -1475,9 +1540,9 @@ test_fuzz_blockundo_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_blockundo_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_bloomfilter_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_45 = test/fuzz/test_fuzz_bloomfilter_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_49 = test/fuzz/test_fuzz_bloomfilter_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_bloomfilter_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_45) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_49) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_bloomfilter_deserialize-deserialize.$(OBJEXT)
 test_fuzz_bloomfilter_deserialize_OBJECTS =  \
 	$(am_test_fuzz_bloomfilter_deserialize_OBJECTS)
@@ -1501,9 +1566,9 @@ test_fuzz_bloomfilter_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_coins_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_46 = test/fuzz/test_fuzz_coins_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_50 = test/fuzz/test_fuzz_coins_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_coins_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_46) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_50) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_coins_deserialize-deserialize.$(OBJEXT)
 test_fuzz_coins_deserialize_OBJECTS =  \
 	$(am_test_fuzz_coins_deserialize_OBJECTS)
@@ -1526,9 +1591,9 @@ test_fuzz_coins_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_coins_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_diskblockindex_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_47 = test/fuzz/test_fuzz_diskblockindex_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_51 = test/fuzz/test_fuzz_diskblockindex_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_diskblockindex_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_47) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_51) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_diskblockindex_deserialize-deserialize.$(OBJEXT)
 test_fuzz_diskblockindex_deserialize_OBJECTS =  \
 	$(am_test_fuzz_diskblockindex_deserialize_OBJECTS)
@@ -1552,9 +1617,9 @@ test_fuzz_diskblockindex_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_inv_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_48 = test/fuzz/test_fuzz_inv_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_52 = test/fuzz/test_fuzz_inv_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_inv_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_48) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_52) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_inv_deserialize-deserialize.$(OBJEXT)
 test_fuzz_inv_deserialize_OBJECTS =  \
 	$(am_test_fuzz_inv_deserialize_OBJECTS)
@@ -1577,9 +1642,9 @@ test_fuzz_inv_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_inv_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_messageheader_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_49 = test/fuzz/test_fuzz_messageheader_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_53 = test/fuzz/test_fuzz_messageheader_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_messageheader_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_49) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_53) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_messageheader_deserialize-deserialize.$(OBJEXT)
 test_fuzz_messageheader_deserialize_OBJECTS =  \
 	$(am_test_fuzz_messageheader_deserialize_OBJECTS)
@@ -1603,9 +1668,9 @@ test_fuzz_messageheader_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_netaddr_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_50 = test/fuzz/test_fuzz_netaddr_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_54 = test/fuzz/test_fuzz_netaddr_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_netaddr_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_50) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_54) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_netaddr_deserialize-deserialize.$(OBJEXT)
 test_fuzz_netaddr_deserialize_OBJECTS =  \
 	$(am_test_fuzz_netaddr_deserialize_OBJECTS)
@@ -1628,9 +1693,9 @@ test_fuzz_netaddr_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_netaddr_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_script_flags_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/script_flags.cpp
-@ENABLE_TESTS_TRUE@am__objects_51 = test/fuzz/test_fuzz_script_flags-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_55 = test/fuzz/test_fuzz_script_flags-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_script_flags_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_51) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_55) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_script_flags-script_flags.$(OBJEXT)
 test_fuzz_script_flags_OBJECTS = $(am_test_fuzz_script_flags_OBJECTS)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@test_fuzz_script_flags_DEPENDENCIES =  \
@@ -1652,9 +1717,9 @@ test_fuzz_script_flags_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_script_flags_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_service_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_52 = test/fuzz/test_fuzz_service_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_56 = test/fuzz/test_fuzz_service_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_service_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_52) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_56) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_service_deserialize-deserialize.$(OBJEXT)
 test_fuzz_service_deserialize_OBJECTS =  \
 	$(am_test_fuzz_service_deserialize_OBJECTS)
@@ -1677,9 +1742,9 @@ test_fuzz_service_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(test_fuzz_service_deserialize_LDFLAGS) $(LDFLAGS) -o $@
 am__test_fuzz_transaction_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_53 = test/fuzz/test_fuzz_transaction_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_57 = test/fuzz/test_fuzz_transaction_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_transaction_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_53) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_57) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_transaction_deserialize-deserialize.$(OBJEXT)
 test_fuzz_transaction_deserialize_OBJECTS =  \
 	$(am_test_fuzz_transaction_deserialize_OBJECTS)
@@ -1703,9 +1768,9 @@ test_fuzz_transaction_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_txoutcompressor_deserialize_SOURCES_DIST =  \
 	test/fuzz/fuzz.cpp test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_54 = test/fuzz/test_fuzz_txoutcompressor_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_58 = test/fuzz/test_fuzz_txoutcompressor_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_txoutcompressor_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_54) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_58) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_txoutcompressor_deserialize-deserialize.$(OBJEXT)
 test_fuzz_txoutcompressor_deserialize_OBJECTS =  \
 	$(am_test_fuzz_txoutcompressor_deserialize_OBJECTS)
@@ -1729,9 +1794,9 @@ test_fuzz_txoutcompressor_deserialize_LINK = $(LIBTOOL) $(AM_V_lt) \
 	$(LDFLAGS) -o $@
 am__test_fuzz_txundo_deserialize_SOURCES_DIST = test/fuzz/fuzz.cpp \
 	test/fuzz/fuzz.h test/fuzz/deserialize.cpp
-@ENABLE_TESTS_TRUE@am__objects_55 = test/fuzz/test_fuzz_txundo_deserialize-fuzz.$(OBJEXT)
+@ENABLE_TESTS_TRUE@am__objects_59 = test/fuzz/test_fuzz_txundo_deserialize-fuzz.$(OBJEXT)
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@am_test_fuzz_txundo_deserialize_OBJECTS =  \
-@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_55) \
+@ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	$(am__objects_59) \
 @ENABLE_FUZZ_TRUE@@ENABLE_TESTS_TRUE@	test/fuzz/test_fuzz_txundo_deserialize-deserialize.$(OBJEXT)
 test_fuzz_txundo_deserialize_OBJECTS =  \
 	$(am_test_fuzz_txundo_deserialize_OBJECTS)
@@ -1801,20 +1866,20 @@ am__test_test_bitcoinafrica_SOURCES_DIST = test/test_bitcoin_main.cpp \
 	test/data/blockfilters.json test/data/key_io_valid.json \
 	test/data/key_io_invalid.json test/data/sighash.json \
 	test/data/tx_invalid.json test/data/tx_valid.json
-@ENABLE_PROPERTY_TESTS_TRUE@@ENABLE_TESTS_TRUE@am__objects_56 = test/gen/test_test_bitcoinafrica-crypto_gen.$(OBJEXT)
-@ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_57 = wallet/test/test_test_bitcoinafrica-wallet_test_fixture.$(OBJEXT) \
+@ENABLE_PROPERTY_TESTS_TRUE@@ENABLE_TESTS_TRUE@am__objects_60 = test/gen/test_test_bitcoinafrica-crypto_gen.$(OBJEXT)
+@ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_61 = wallet/test/test_test_bitcoinafrica-wallet_test_fixture.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-init_test_fixture.$(OBJEXT)
-@ENABLE_TESTS_TRUE@am__objects_58 = test/test_test_bitcoinafrica-test_bitcoin_main.$(OBJEXT) \
+@ENABLE_TESTS_TRUE@am__objects_62 = test/test_test_bitcoinafrica-test_bitcoin_main.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-test_bitcoin.$(OBJEXT) \
-@ENABLE_TESTS_TRUE@	$(am__objects_56) $(am__objects_57)
-@ENABLE_PROPERTY_TESTS_TRUE@@ENABLE_TESTS_TRUE@am__objects_59 = test/test_test_bitcoinafrica-key_properties.$(OBJEXT)
-@ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_60 = wallet/test/test_test_bitcoinafrica-db_tests.$(OBJEXT) \
+@ENABLE_TESTS_TRUE@	$(am__objects_60) $(am__objects_61)
+@ENABLE_PROPERTY_TESTS_TRUE@@ENABLE_TESTS_TRUE@am__objects_63 = test/test_test_bitcoinafrica-key_properties.$(OBJEXT)
+@ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@am__objects_64 = wallet/test/test_test_bitcoinafrica-db_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-psbt_wallet_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-wallet_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-wallet_crypto_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-coinselector_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@@ENABLE_WALLET_TRUE@	wallet/test/test_test_bitcoinafrica-init_tests.$(OBJEXT)
-@ENABLE_TESTS_TRUE@am__objects_61 = test/test_test_bitcoinafrica-arith_uint256_tests.$(OBJEXT) \
+@ENABLE_TESTS_TRUE@am__objects_65 = test/test_test_bitcoinafrica-arith_uint256_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-addrman_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-amount_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-allocator_tests.$(OBJEXT) \
@@ -1881,14 +1946,15 @@ am__test_test_bitcoinafrica_SOURCES_DIST = test/test_bitcoin_main.cpp \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-util_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-validation_block_tests.$(OBJEXT) \
 @ENABLE_TESTS_TRUE@	test/test_test_bitcoinafrica-versionbits_tests.$(OBJEXT) \
-@ENABLE_TESTS_TRUE@	$(am__objects_59) $(am__objects_60)
+@ENABLE_TESTS_TRUE@	$(am__objects_63) $(am__objects_64)
 @ENABLE_TESTS_TRUE@am_test_test_bitcoinafrica_OBJECTS =  \
-@ENABLE_TESTS_TRUE@	$(am__objects_58) $(am__objects_61) \
+@ENABLE_TESTS_TRUE@	$(am__objects_62) $(am__objects_65) \
 @ENABLE_TESTS_TRUE@	$(am__objects_4) $(am__objects_4)
-@ENABLE_TESTS_TRUE@am__objects_62 = $(am__objects_4) $(am__objects_4)
+@ENABLE_TESTS_TRUE@am__objects_66 = $(am__objects_4) $(am__objects_4)
 @ENABLE_TESTS_TRUE@nodist_test_test_bitcoinafrica_OBJECTS =  \
-@ENABLE_TESTS_TRUE@	$(am__objects_62)
-test_test_bitcoinafrica_OBJECTS = $(am_test_test_bitcoinafrica_OBJECTS) \
+@ENABLE_TESTS_TRUE@	$(am__objects_66)
+test_test_bitcoinafrica_OBJECTS =  \
+	$(am_test_test_bitcoinafrica_OBJECTS) \
 	$(nodist_test_test_bitcoinafrica_OBJECTS)
 @ENABLE_TESTS_TRUE@@ENABLE_ZMQ_TRUE@am__DEPENDENCIES_10 =  \
 @ENABLE_TESTS_TRUE@@ENABLE_ZMQ_TRUE@	$(am__DEPENDENCIES_1)
@@ -1908,65 +1974,6 @@ test_test_bitcoinafrica_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(test_test_bitcoinafrica_CXXFLAGS) $(CXXFLAGS) \
 	$(test_test_bitcoinafrica_LDFLAGS) $(LDFLAGS) -o $@
-am__bitcoinafrica_cli_SOURCES_DIST = bitcoin-cli.cpp bitcoin-cli-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_63 = bitcoin-cli-res.$(OBJEXT)
-am_bitcoinafrica_cli_OBJECTS = bitcoinafrica_cli-bitcoin-cli.$(OBJEXT) \
-	$(am__objects_63)
-bitcoinafrica_cli_OBJECTS = $(am_bitcoinafrica_cli_OBJECTS)
-bitcoinafrica_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_4) \
-	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-bitcoinafrica_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) \
-	$(bitcoinafrica_cli_LDFLAGS) $(LDFLAGS) -o $@
-am__bitcoinafrica_tx_SOURCES_DIST = bitcoin-tx.cpp bitcoin-tx-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_64 = bitcoin-tx-res.$(OBJEXT)
-am_bitcoinafrica_tx_OBJECTS = bitcoinafrica_tx-bitcoin-tx.$(OBJEXT) \
-	$(am__objects_64)
-bitcoinafrica_tx_OBJECTS = $(am_bitcoinafrica_tx_OBJECTS)
-bitcoinafrica_tx_DEPENDENCIES = $(am__DEPENDENCIES_4) \
-	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
-	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-bitcoinafrica_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) $(bitcoinafrica_tx_LDFLAGS) \
-	$(LDFLAGS) -o $@
-am__bitcoinafrica_wallet_SOURCES_DIST = bitcoin-wallet.cpp \
-	bitcoin-wallet-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_65 = bitcoin-wallet-res.$(OBJEXT)
-am_bitcoinafrica_wallet_OBJECTS =  \
-	bitcoinafrica_wallet-bitcoin-wallet.$(OBJEXT) $(am__objects_65)
-bitcoinafrica_wallet_OBJECTS = $(am_bitcoinafrica_wallet_OBJECTS)
-bitcoinafrica_wallet_DEPENDENCIES = $(LIBBITCOIN_WALLET_TOOL) \
-	$(LIBBITCOIN_WALLET) $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
-	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_UTIL) \
-	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) $(LIBLEVELDB_SSE42) \
-	$(am__DEPENDENCIES_3) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
-bitcoinafrica_wallet_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) \
-	$(bitcoinafrica_wallet_LDFLAGS) $(LDFLAGS) -o $@
-am__bitcoinafricad_SOURCES_DIST = bitcoind.cpp bitcoind-res.rc
-@TARGET_WINDOWS_TRUE@am__objects_66 = bitcoind-res.$(OBJEXT)
-am_bitcoinafricad_OBJECTS = bitcoinafricad-bitcoind.$(OBJEXT) \
-	$(am__objects_66)
-bitcoinafricad_OBJECTS = $(am_bitcoinafricad_OBJECTS)
-bitcoinafricad_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_WALLET) \
-	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
-	$(am__DEPENDENCIES_4) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_ZMQ) \
-	$(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
-	$(am__DEPENDENCIES_2) $(LIBLEVELDB_SSE42) \
-	$(am__DEPENDENCIES_3) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-bitcoinafricad_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(bitcoinafricad_CXXFLAGS) \
-	$(CXXFLAGS) $(bitcoinafricad_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -2055,9 +2062,11 @@ SOURCES = $(crypto_libbitcoin_crypto_avx2_a_SOURCES) \
 	$(libbitcoinconsensus_la_SOURCES) \
 	$(bench_bench_bitcoinafrica_SOURCES) \
 	$(nodist_bench_bench_bitcoinafrica_SOURCES) \
+	$(bitcoinafrica_cli_SOURCES) $(bitcoinafrica_tx_SOURCES) \
+	$(bitcoinafrica_wallet_SOURCES) $(bitcoinafricad_SOURCES) \
+	$(qt_bitcoinafrica_qt_SOURCES) \
 	$(qt_test_test_bitcoinafrica_qt_SOURCES) \
 	$(nodist_qt_test_test_bitcoinafrica_qt_SOURCES) \
-	$(qt_bitcoinafrica_qt_SOURCES) \
 	$(test_fuzz_address_deserialize_SOURCES) \
 	$(test_fuzz_addrman_deserialize_SOURCES) \
 	$(test_fuzz_banentry_deserialize_SOURCES) \
@@ -2080,9 +2089,7 @@ SOURCES = $(crypto_libbitcoin_crypto_avx2_a_SOURCES) \
 	$(test_fuzz_txoutcompressor_deserialize_SOURCES) \
 	$(test_fuzz_txundo_deserialize_SOURCES) \
 	$(test_test_bitcoinafrica_SOURCES) \
-	$(nodist_test_test_bitcoinafrica_SOURCES) \
-	$(bitcoinafrica_cli_SOURCES) $(bitcoinafrica_tx_SOURCES) \
-	$(bitcoinafrica_wallet_SOURCES) $(bitcoinafricad_SOURCES)
+	$(nodist_test_test_bitcoinafrica_SOURCES)
 DIST_SOURCES = $(crypto_libbitcoin_crypto_avx2_a_SOURCES) \
 	$(am__crypto_libbitcoin_crypto_base_a_SOURCES_DIST) \
 	$(crypto_libbitcoin_crypto_shani_a_SOURCES) \
@@ -2100,8 +2107,12 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_avx2_a_SOURCES) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
 	$(am__bench_bench_bitcoinafrica_SOURCES_DIST) \
-	$(am__qt_test_test_bitcoinafrica_qt_SOURCES_DIST) \
+	$(am__bitcoinafrica_cli_SOURCES_DIST) \
+	$(am__bitcoinafrica_tx_SOURCES_DIST) \
+	$(am__bitcoinafrica_wallet_SOURCES_DIST) \
+	$(am__bitcoinafricad_SOURCES_DIST) \
 	$(am__qt_bitcoinafrica_qt_SOURCES_DIST) \
+	$(am__qt_test_test_bitcoinafrica_qt_SOURCES_DIST) \
 	$(am__test_fuzz_address_deserialize_SOURCES_DIST) \
 	$(am__test_fuzz_addrman_deserialize_SOURCES_DIST) \
 	$(am__test_fuzz_banentry_deserialize_SOURCES_DIST) \
@@ -2123,11 +2134,7 @@ DIST_SOURCES = $(crypto_libbitcoin_crypto_avx2_a_SOURCES) \
 	$(am__test_fuzz_transaction_deserialize_SOURCES_DIST) \
 	$(am__test_fuzz_txoutcompressor_deserialize_SOURCES_DIST) \
 	$(am__test_fuzz_txundo_deserialize_SOURCES_DIST) \
-	$(am__test_test_bitcoinafrica_SOURCES_DIST) \
-	$(am__bitcoinafrica_cli_SOURCES_DIST) \
-	$(am__bitcoinafrica_tx_SOURCES_DIST) \
-	$(am__bitcoinafrica_wallet_SOURCES_DIST) \
-	$(am__bitcoinafricad_SOURCES_DIST)
+	$(am__test_test_bitcoinafrica_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -3973,6 +3980,7 @@ EXTRA_DIST = $(CTAES_DIST)
 @ENABLE_QT_TRUE@  qt/res/icons/bitcoin.ico \
 @ENABLE_QT_TRUE@  qt/res/icons/bitcoin_testnet.ico \
 @ENABLE_QT_TRUE@  qt/res/icons/bitcoin.png \
+@ENABLE_QT_TRUE@  qt/res/icons/bitcoin2.png \
 @ENABLE_QT_TRUE@  qt/res/icons/chevron.png \
 @ENABLE_QT_TRUE@  qt/res/icons/clock1.png \
 @ENABLE_QT_TRUE@  qt/res/icons/clock2.png \
@@ -5068,8 +5076,8 @@ bench/$(DEPDIR)/$(am__dirstamp):
 	@: > bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-bench_bitcoin.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_bitcoinafrica-bench.$(OBJEXT): bench/$(am__dirstamp) \
-	bench/$(DEPDIR)/$(am__dirstamp)
+bench/bench_bench_bitcoinafrica-bench.$(OBJEXT):  \
+	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-block_assemble.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-checkblock.$(OBJEXT):  \
@@ -5094,10 +5102,10 @@ bench/bench_bench_bitcoinafrica-mempool_eviction.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-verify_script.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_bitcoinafrica-base58.$(OBJEXT): bench/$(am__dirstamp) \
-	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_bitcoinafrica-bech32.$(OBJEXT): bench/$(am__dirstamp) \
-	bench/$(DEPDIR)/$(am__dirstamp)
+bench/bench_bench_bitcoinafrica-base58.$(OBJEXT):  \
+	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
+bench/bench_bench_bitcoinafrica-bech32.$(OBJEXT):  \
+	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-lockedpool.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 bench/bench_bench_bitcoinafrica-prevector.$(OBJEXT):  \
@@ -5108,6 +5116,36 @@ bench/bench_bench_bitcoinafrica-coin_selection.$(OBJEXT):  \
 bench/bench_bitcoinafrica$(EXEEXT): $(bench_bench_bitcoinafrica_OBJECTS) $(bench_bench_bitcoinafrica_DEPENDENCIES) $(EXTRA_bench_bench_bitcoinafrica_DEPENDENCIES) bench/$(am__dirstamp)
 	@rm -f bench/bench_bitcoinafrica$(EXEEXT)
 	$(AM_V_CXXLD)$(bench_bench_bitcoinafrica_LINK) $(bench_bench_bitcoinafrica_OBJECTS) $(bench_bench_bitcoinafrica_LDADD) $(LIBS)
+
+bitcoinafrica-cli$(EXEEXT): $(bitcoinafrica_cli_OBJECTS) $(bitcoinafrica_cli_DEPENDENCIES) $(EXTRA_bitcoinafrica_cli_DEPENDENCIES) 
+	@rm -f bitcoinafrica-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(bitcoinafrica_cli_LINK) $(bitcoinafrica_cli_OBJECTS) $(bitcoinafrica_cli_LDADD) $(LIBS)
+
+bitcoinafrica-tx$(EXEEXT): $(bitcoinafrica_tx_OBJECTS) $(bitcoinafrica_tx_DEPENDENCIES) $(EXTRA_bitcoinafrica_tx_DEPENDENCIES) 
+	@rm -f bitcoinafrica-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(bitcoinafrica_tx_LINK) $(bitcoinafrica_tx_OBJECTS) $(bitcoinafrica_tx_LDADD) $(LIBS)
+
+bitcoinafrica-wallet$(EXEEXT): $(bitcoinafrica_wallet_OBJECTS) $(bitcoinafrica_wallet_DEPENDENCIES) $(EXTRA_bitcoinafrica_wallet_DEPENDENCIES) 
+	@rm -f bitcoinafrica-wallet$(EXEEXT)
+	$(AM_V_CXXLD)$(bitcoinafrica_wallet_LINK) $(bitcoinafrica_wallet_OBJECTS) $(bitcoinafrica_wallet_LDADD) $(LIBS)
+
+bitcoinafricad$(EXEEXT): $(bitcoinafricad_OBJECTS) $(bitcoinafricad_DEPENDENCIES) $(EXTRA_bitcoinafricad_DEPENDENCIES) 
+	@rm -f bitcoinafricad$(EXEEXT)
+	$(AM_V_CXXLD)$(bitcoinafricad_LINK) $(bitcoinafricad_OBJECTS) $(bitcoinafricad_LDADD) $(LIBS)
+qt/qt_bitcoinafrica_qt-main.$(OBJEXT): qt/$(am__dirstamp) \
+	qt/$(DEPDIR)/$(am__dirstamp)
+qt/res/$(am__dirstamp):
+	@$(MKDIR_P) qt/res
+	@: > qt/res/$(am__dirstamp)
+qt/res/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) qt/res/$(DEPDIR)
+	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
+qt/res/bitcoin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
+	qt/res/$(DEPDIR)/$(am__dirstamp)
+
+qt/bitcoinafrica-qt$(EXEEXT): $(qt_bitcoinafrica_qt_OBJECTS) $(qt_bitcoinafrica_qt_DEPENDENCIES) $(EXTRA_qt_bitcoinafrica_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/bitcoinafrica-qt$(EXEEXT)
+	$(AM_V_CXXLD)$(qt_bitcoinafrica_qt_LINK) $(qt_bitcoinafrica_qt_OBJECTS) $(qt_bitcoinafrica_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
@@ -5167,20 +5205,6 @@ qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.$(OBJEXT):  \
 qt/test/test_bitcoinafrica-qt$(EXEEXT): $(qt_test_test_bitcoinafrica_qt_OBJECTS) $(qt_test_test_bitcoinafrica_qt_DEPENDENCIES) $(EXTRA_qt_test_test_bitcoinafrica_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
 	@rm -f qt/test/test_bitcoinafrica-qt$(EXEEXT)
 	$(AM_V_CXXLD)$(qt_test_test_bitcoinafrica_qt_LINK) $(qt_test_test_bitcoinafrica_qt_OBJECTS) $(qt_test_test_bitcoinafrica_qt_LDADD) $(LIBS)
-qt/qt_bitcoinafrica_qt-main.$(OBJEXT): qt/$(am__dirstamp) \
-	qt/$(DEPDIR)/$(am__dirstamp)
-qt/res/$(am__dirstamp):
-	@$(MKDIR_P) qt/res
-	@: > qt/res/$(am__dirstamp)
-qt/res/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) qt/res/$(DEPDIR)
-	@: > qt/res/$(DEPDIR)/$(am__dirstamp)
-qt/res/bitcoin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
-	qt/res/$(DEPDIR)/$(am__dirstamp)
-
-qt/bitcoinafrica-qt$(EXEEXT): $(qt_bitcoinafrica_qt_OBJECTS) $(qt_bitcoinafrica_qt_DEPENDENCIES) $(EXTRA_qt_bitcoinafrica_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/bitcoinafrica-qt$(EXEEXT)
-	$(AM_V_CXXLD)$(qt_bitcoinafrica_qt_LINK) $(qt_bitcoinafrica_qt_OBJECTS) $(qt_bitcoinafrica_qt_LDADD) $(LIBS)
 test/fuzz/$(am__dirstamp):
 	@$(MKDIR_P) test/fuzz
 	@: > test/fuzz/$(am__dirstamp)
@@ -5389,20 +5413,20 @@ test/test_test_bitcoinafrica-base64_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-bech32_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-bip32_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-bip32_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-blockchain_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-blockfilter_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-bloom_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-bswap_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-bloom_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-bswap_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-checkqueue_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-coins_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-compilerbug_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-compress_tests.$(OBJEXT):  \
@@ -5419,38 +5443,38 @@ test/test_test_bitcoinafrica-fs_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-getarg_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-hash_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-key_io_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-key_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-key_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-limitedmap_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-dbwrapper_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-main_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-main_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-mempool_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-merkle_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-merkleblock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-miner_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-multisig_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-net_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-net_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-netbase_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-pmt_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-policyestimator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-pow_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-pow_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-prevector_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-raii_event_tests.$(OBJEXT):  \
@@ -5459,8 +5483,8 @@ test/test_test_bitcoinafrica-random_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-reverselock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-rpc_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-sanity_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-scheduler_tests.$(OBJEXT):  \
@@ -5485,8 +5509,8 @@ test/test_test_bitcoinafrica-skiplist_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-streams_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-sync_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-sync_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-timedata_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-torcontrol_tests.$(OBJEXT):  \
@@ -5501,8 +5525,8 @@ test/test_test_bitcoinafrica-txvalidationcache_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-uint256_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_bitcoinafrica-util_tests.$(OBJEXT): test/$(am__dirstamp) \
-	test/$(DEPDIR)/$(am__dirstamp)
+test/test_test_bitcoinafrica-util_tests.$(OBJEXT):  \
+	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-validation_block_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 test/test_test_bitcoinafrica-versionbits_tests.$(OBJEXT):  \
@@ -5531,22 +5555,6 @@ wallet/test/test_test_bitcoinafrica-init_tests.$(OBJEXT):  \
 test/test_bitcoinafrica$(EXEEXT): $(test_test_bitcoinafrica_OBJECTS) $(test_test_bitcoinafrica_DEPENDENCIES) $(EXTRA_test_test_bitcoinafrica_DEPENDENCIES) test/$(am__dirstamp)
 	@rm -f test/test_bitcoinafrica$(EXEEXT)
 	$(AM_V_CXXLD)$(test_test_bitcoinafrica_LINK) $(test_test_bitcoinafrica_OBJECTS) $(test_test_bitcoinafrica_LDADD) $(LIBS)
-
-bitcoinafrica-cli$(EXEEXT): $(bitcoinafrica_cli_OBJECTS) $(bitcoinafrica_cli_DEPENDENCIES) $(EXTRA_bitcoinafrica_cli_DEPENDENCIES) 
-	@rm -f bitcoinafrica-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(bitcoinafrica_cli_LINK) $(bitcoinafrica_cli_OBJECTS) $(bitcoinafrica_cli_LDADD) $(LIBS)
-
-bitcoinafrica-tx$(EXEEXT): $(bitcoinafrica_tx_OBJECTS) $(bitcoinafrica_tx_DEPENDENCIES) $(EXTRA_bitcoinafrica_tx_DEPENDENCIES) 
-	@rm -f bitcoinafrica-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(bitcoinafrica_tx_LINK) $(bitcoinafrica_tx_OBJECTS) $(bitcoinafrica_tx_LDADD) $(LIBS)
-
-bitcoinafrica-wallet$(EXEEXT): $(bitcoinafrica_wallet_OBJECTS) $(bitcoinafrica_wallet_DEPENDENCIES) $(EXTRA_bitcoinafrica_wallet_DEPENDENCIES) 
-	@rm -f bitcoinafrica-wallet$(EXEEXT)
-	$(AM_V_CXXLD)$(bitcoinafrica_wallet_LINK) $(bitcoinafrica_wallet_OBJECTS) $(bitcoinafrica_wallet_LDADD) $(LIBS)
-
-bitcoinafricad$(EXEEXT): $(bitcoinafricad_OBJECTS) $(bitcoinafricad_DEPENDENCIES) $(EXTRA_bitcoinafricad_DEPENDENCIES) 
-	@rm -f bitcoinafricad$(EXEEXT)
-	$(AM_V_CXXLD)$(bitcoinafricad_LINK) $(bitcoinafricad_OBJECTS) $(bitcoinafricad_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -5587,6 +5595,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafricad-bitcoind.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoin_common_a-base58.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoin_common_a-bech32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoin_common_a-chainparams.Po@am__quote@
@@ -5649,10 +5661,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoinconsensus_la-hash.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoinconsensus_la-pubkey.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libbitcoinconsensus_la-uint256.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bitcoinafricad-bitcoind.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@bench/$(DEPDIR)/bench_bench_bitcoinafrica-base58.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@bench/$(DEPDIR)/bench_bench_bitcoinafrica-bech32.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@bench/$(DEPDIR)/bench_bench_bitcoinafrica-bench.Po@am__quote@
@@ -5765,6 +5773,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoin_consensus_a-transaction.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoinconsensus_la-block.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@primitives/$(DEPDIR)/libbitcoinconsensus_la-transaction.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-addressbookpage.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-addresstablemodel.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-askpassphrasedialog.Po@am__quote@
@@ -5869,7 +5878,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodeltransaction.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-walletview.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_libbitcoinqt_a-winshutdownmonitor.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-addressbooktests.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-apptests.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-compattests.Po@am__quote@
@@ -10459,6 +10467,76 @@ bench/bench_bench_bitcoinafrica-coin_selection.obj: bench/coin_selection.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_bitcoinafrica_CPPFLAGS) $(CPPFLAGS) $(bench_bench_bitcoinafrica_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_bitcoinafrica-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
 
+bitcoinafrica_cli-bitcoin-cli.o: bitcoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_cli-bitcoin-cli.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo -c -o bitcoinafrica_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-cli.cpp' object='bitcoinafrica_cli-bitcoin-cli.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
+
+bitcoinafrica_cli-bitcoin-cli.obj: bitcoin-cli.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_cli-bitcoin-cli.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo -c -o bitcoinafrica_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-cli.cpp' object='bitcoinafrica_cli-bitcoin-cli.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
+
+bitcoinafrica_tx-bitcoin-tx.o: bitcoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_tx-bitcoin-tx.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo -c -o bitcoinafrica_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-tx.cpp' object='bitcoinafrica_tx-bitcoin-tx.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
+
+bitcoinafrica_tx-bitcoin-tx.obj: bitcoin-tx.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_tx-bitcoin-tx.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo -c -o bitcoinafrica_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-tx.cpp' object='bitcoinafrica_tx-bitcoin-tx.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
+
+bitcoinafrica_wallet-bitcoin-wallet.o: bitcoin-wallet.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_wallet-bitcoin-wallet.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo -c -o bitcoinafrica_wallet-bitcoin-wallet.o `test -f 'bitcoin-wallet.cpp' || echo '$(srcdir)/'`bitcoin-wallet.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-wallet.cpp' object='bitcoinafrica_wallet-bitcoin-wallet.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_wallet-bitcoin-wallet.o `test -f 'bitcoin-wallet.cpp' || echo '$(srcdir)/'`bitcoin-wallet.cpp
+
+bitcoinafrica_wallet-bitcoin-wallet.obj: bitcoin-wallet.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_wallet-bitcoin-wallet.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo -c -o bitcoinafrica_wallet-bitcoin-wallet.obj `if test -f 'bitcoin-wallet.cpp'; then $(CYGPATH_W) 'bitcoin-wallet.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-wallet.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-wallet.cpp' object='bitcoinafrica_wallet-bitcoin-wallet.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_wallet-bitcoin-wallet.obj `if test -f 'bitcoin-wallet.cpp'; then $(CYGPATH_W) 'bitcoin-wallet.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-wallet.cpp'; fi`
+
+bitcoinafricad-bitcoind.o: bitcoind.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafricad-bitcoind.o -MD -MP -MF $(DEPDIR)/bitcoinafricad-bitcoind.Tpo -c -o bitcoinafricad-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafricad-bitcoind.Tpo $(DEPDIR)/bitcoinafricad-bitcoind.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoind.cpp' object='bitcoinafricad-bitcoind.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafricad-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
+
+bitcoinafricad-bitcoind.obj: bitcoind.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafricad-bitcoind.obj -MD -MP -MF $(DEPDIR)/bitcoinafricad-bitcoind.Tpo -c -o bitcoinafricad-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafricad-bitcoind.Tpo $(DEPDIR)/bitcoinafricad-bitcoind.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoind.cpp' object='bitcoinafricad-bitcoind.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafricad-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
+
+qt/qt_bitcoinafrica_qt-main.o: qt/main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_bitcoinafrica_qt-main.o -MD -MP -MF qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo -c -o qt/qt_bitcoinafrica_qt-main.o `test -f 'qt/main.cpp' || echo '$(srcdir)/'`qt/main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/main.cpp' object='qt/qt_bitcoinafrica_qt-main.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_bitcoinafrica_qt-main.o `test -f 'qt/main.cpp' || echo '$(srcdir)/'`qt/main.cpp
+
+qt/qt_bitcoinafrica_qt-main.obj: qt/main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_bitcoinafrica_qt-main.obj -MD -MP -MF qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo -c -o qt/qt_bitcoinafrica_qt-main.obj `if test -f 'qt/main.cpp'; then $(CYGPATH_W) 'qt/main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/main.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/main.cpp' object='qt/qt_bitcoinafrica_qt-main.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_bitcoinafrica_qt-main.obj `if test -f 'qt/main.cpp'; then $(CYGPATH_W) 'qt/main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/main.cpp'; fi`
+
 qt/test/qt_test_test_bitcoinafrica_qt-apptests.o: qt/test/apptests.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_bitcoinafrica_qt-apptests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-apptests.Tpo -c -o qt/test/qt_test_test_bitcoinafrica_qt-apptests.o `test -f 'qt/test/apptests.cpp' || echo '$(srcdir)/'`qt/test/apptests.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-apptests.Tpo qt/test/$(DEPDIR)/qt_test_test_bitcoinafrica_qt-apptests.Po
@@ -10710,20 +10788,6 @@ qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.obj: qt/test/moc_pa
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_bitcoinafrica_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
-
-qt/qt_bitcoinafrica_qt-main.o: qt/main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_bitcoinafrica_qt-main.o -MD -MP -MF qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo -c -o qt/qt_bitcoinafrica_qt-main.o `test -f 'qt/main.cpp' || echo '$(srcdir)/'`qt/main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/main.cpp' object='qt/qt_bitcoinafrica_qt-main.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_bitcoinafrica_qt-main.o `test -f 'qt/main.cpp' || echo '$(srcdir)/'`qt/main.cpp
-
-qt/qt_bitcoinafrica_qt-main.obj: qt/main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_bitcoinafrica_qt-main.obj -MD -MP -MF qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo -c -o qt/qt_bitcoinafrica_qt-main.obj `if test -f 'qt/main.cpp'; then $(CYGPATH_W) 'qt/main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/main.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Tpo qt/$(DEPDIR)/qt_bitcoinafrica_qt-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='qt/main.cpp' object='qt/qt_bitcoinafrica_qt-main.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_bitcoinafrica_qt_CPPFLAGS) $(CPPFLAGS) $(qt_bitcoinafrica_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_bitcoinafrica_qt-main.obj `if test -f 'qt/main.cpp'; then $(CYGPATH_W) 'qt/main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/main.cpp'; fi`
 
 test/fuzz/test_fuzz_address_deserialize-fuzz.o: test/fuzz/fuzz.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fuzz_address_deserialize_CPPFLAGS) $(CPPFLAGS) $(test_fuzz_address_deserialize_CXXFLAGS) $(CXXFLAGS) -MT test/fuzz/test_fuzz_address_deserialize-fuzz.o -MD -MP -MF test/fuzz/$(DEPDIR)/test_fuzz_address_deserialize-fuzz.Tpo -c -o test/fuzz/test_fuzz_address_deserialize-fuzz.o `test -f 'test/fuzz/fuzz.cpp' || echo '$(srcdir)/'`test/fuzz/fuzz.cpp
@@ -12418,62 +12482,6 @@ wallet/test/test_test_bitcoinafrica-init_tests.obj: wallet/test/init_tests.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='wallet/test/init_tests.cpp' object='wallet/test/test_test_bitcoinafrica-init_tests.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_bitcoinafrica_CPPFLAGS) $(CPPFLAGS) $(test_test_bitcoinafrica_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_bitcoinafrica-init_tests.obj `if test -f 'wallet/test/init_tests.cpp'; then $(CYGPATH_W) 'wallet/test/init_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/init_tests.cpp'; fi`
-
-bitcoinafrica_cli-bitcoin-cli.o: bitcoin-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_cli-bitcoin-cli.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo -c -o bitcoinafrica_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-cli.cpp' object='bitcoinafrica_cli-bitcoin-cli.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
-
-bitcoinafrica_cli-bitcoin-cli.obj: bitcoin-cli.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_cli-bitcoin-cli.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo -c -o bitcoinafrica_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Tpo $(DEPDIR)/bitcoinafrica_cli-bitcoin-cli.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-cli.cpp' object='bitcoinafrica_cli-bitcoin-cli.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_cli_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_cli_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
-
-bitcoinafrica_tx-bitcoin-tx.o: bitcoin-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_tx-bitcoin-tx.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo -c -o bitcoinafrica_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-tx.cpp' object='bitcoinafrica_tx-bitcoin-tx.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
-
-bitcoinafrica_tx-bitcoin-tx.obj: bitcoin-tx.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_tx-bitcoin-tx.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo -c -o bitcoinafrica_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Tpo $(DEPDIR)/bitcoinafrica_tx-bitcoin-tx.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-tx.cpp' object='bitcoinafrica_tx-bitcoin-tx.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_tx_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_tx_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
-
-bitcoinafrica_wallet-bitcoin-wallet.o: bitcoin-wallet.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_wallet-bitcoin-wallet.o -MD -MP -MF $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo -c -o bitcoinafrica_wallet-bitcoin-wallet.o `test -f 'bitcoin-wallet.cpp' || echo '$(srcdir)/'`bitcoin-wallet.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-wallet.cpp' object='bitcoinafrica_wallet-bitcoin-wallet.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_wallet-bitcoin-wallet.o `test -f 'bitcoin-wallet.cpp' || echo '$(srcdir)/'`bitcoin-wallet.cpp
-
-bitcoinafrica_wallet-bitcoin-wallet.obj: bitcoin-wallet.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafrica_wallet-bitcoin-wallet.obj -MD -MP -MF $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo -c -o bitcoinafrica_wallet-bitcoin-wallet.obj `if test -f 'bitcoin-wallet.cpp'; then $(CYGPATH_W) 'bitcoin-wallet.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-wallet.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Tpo $(DEPDIR)/bitcoinafrica_wallet-bitcoin-wallet.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoin-wallet.cpp' object='bitcoinafrica_wallet-bitcoin-wallet.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafrica_wallet_CPPFLAGS) $(CPPFLAGS) $(bitcoinafrica_wallet_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafrica_wallet-bitcoin-wallet.obj `if test -f 'bitcoin-wallet.cpp'; then $(CYGPATH_W) 'bitcoin-wallet.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-wallet.cpp'; fi`
-
-bitcoinafricad-bitcoind.o: bitcoind.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafricad-bitcoind.o -MD -MP -MF $(DEPDIR)/bitcoinafricad-bitcoind.Tpo -c -o bitcoinafricad-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafricad-bitcoind.Tpo $(DEPDIR)/bitcoinafricad-bitcoind.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoind.cpp' object='bitcoinafricad-bitcoind.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafricad-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
-
-bitcoinafricad-bitcoind.obj: bitcoind.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -MT bitcoinafricad-bitcoind.obj -MD -MP -MF $(DEPDIR)/bitcoinafricad-bitcoind.Tpo -c -o bitcoinafricad-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bitcoinafricad-bitcoind.Tpo $(DEPDIR)/bitcoinafricad-bitcoind.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bitcoind.cpp' object='bitcoinafricad-bitcoind.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bitcoinafricad_CPPFLAGS) $(CPPFLAGS) $(bitcoinafricad_CXXFLAGS) $(CXXFLAGS) -c -o bitcoinafricad-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
